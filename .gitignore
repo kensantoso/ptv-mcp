@@ -1,0 +1,13 @@
+# Never commit credentials. The realtime key belongs in the MCP client config.
+.env
+*.key
+*.local
+
+# Build output and derived data.
+/ptv-mcp
+*.db
+*.zip
+
+# Packed bundle and its staging dir: build artefacts, rebuilt by `mcpb pack bundle`.
+/bundle/server/
+*.mcpb

@@ -1,0 +1,88 @@
+{
+  "manifest_version": "0.4",
+  "name": "ptv-mcp",
+  "display_name": "Melbourne Public Transport",
+  "version": "0.6.0",
+  "description": "Departures, journey planning and live delays for Melbourne trains, trams and buses.",
+  "long_description": "Answers transport questions from Victoria's published GTFS feed and, with an optional key, the GTFS-Realtime feeds.\n\nThe timetable works with no credential at all. Adding a realtime key turns scheduled times into live ones: how late each service is running, current disruptions, and a warning when delays have broken a connection you were relying on.\n\nOn first run the extension downloads the timetable feed and builds a local index. This takes a few minutes and happens once; the tools report progress while it runs. Everything after that is answered locally.",
+  "author": {
+    "name": "kensantoso",
+    "url": "https://github.com/kensantoso"
+  },
+  "license": "MIT",
+  "keywords": [
+    "transport",
+    "melbourne",
+    "gtfs",
+    "trains",
+    "trams"
+  ],
+  "server": {
+    "type": "binary",
+    "entry_point": "server/ptv-mcp",
+    "mcp_config": {
+      "command": "${__dirname}/server/ptv-mcp",
+      "args": [],
+      "env": {
+        "PTV_REALTIME_KEY": "${user_config.realtime_key}"
+      }
+    }
+  },
+  "tools": [
+    {
+      "name": "find_stop",
+      "description": "Find a station or stop by name and return its id"
+    },
+    {
+      "name": "next_departures",
+      "description": "Upcoming departures from a stop, with live delays"
+    },
+    {
+      "name": "plan_trip",
+      "description": "Journeys between two stops, direct or with one change"
+    },
+    {
+      "name": "last_service",
+      "description": "Services still to depart tonight, including after midnight"
+    },
+    {
+      "name": "service_alerts",
+      "description": "Current disruptions and how late each line is running"
+    },
+    {
+      "name": "stops_near",
+      "description": "Stops near a point, grouped by mode"
+    },
+    {
+      "name": "compare_departure_stops",
+      "description": "Which nearby stop reaches a destination soonest, and by which mode"
+    },
+    {
+      "name": "leg_calls",
+      "description": "Every station a leg calls at, and the ones it runs through"
+    },
+    {
+      "name": "database_status",
+      "description": "How old the local timetable database is, and whether it has gone stale"
+    },
+    {
+      "name": "rebuild_database",
+      "description": "Rebuild the timetable database from the published feed, in the background"
+    }
+  ],
+  "user_config": {
+    "realtime_key": {
+      "type": "string",
+      "title": "Realtime API key",
+      "description": "Optional. Adds live delays, cancellations and disruption alerts. Free and self-service at opendata.transport.vic.gov.au. Without it you get the published timetable only.",
+      "sensitive": true,
+      "required": false
+    }
+  },
+  "compatibility": {
+    "claude_desktop": ">=0.10.0",
+    "platforms": [
+      "darwin"
+    ]
+  }
+}
