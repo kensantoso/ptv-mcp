@@ -3,7 +3,7 @@ module github.com/kensantoso/ptv-mcp
 go 1.25.0
 
 require (
-	github.com/kensantoso/ptv-gtfs-go v0.4.2
+	github.com/kensantoso/ptv-gtfs-go v0.5.0
 	github.com/modelcontextprotocol/go-sdk v1.7.0
 	modernc.org/sqlite v1.34.5
 )

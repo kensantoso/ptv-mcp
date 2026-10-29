@@ -12,8 +12,8 @@ github.com/google/pprof v0.0.0-20240409012703-83162a5b38cd h1:gbpYu9NMq8jhDVbvlG
 github.com/google/pprof v0.0.0-20240409012703-83162a5b38cd/go.mod h1:kf6iHlnVGwgKolg33glAes7Yg/8iWP8ukqeldJSO7jw=
 github.com/google/uuid v1.6.0 h1:NIvaJDMOsjHA8n1jAhLSgzrAzy1Hgr+hNrb57e+94F0=
 github.com/google/uuid v1.6.0/go.mod h1:TIyPZe4MgqvfeYDBFedMoGGpEw/LqOeaOT+nhxU+yHo=
-github.com/kensantoso/ptv-gtfs-go v0.4.2 h1:HGWmhiD4s9iuJcq/dBj6yqHOJIlOhG171mfLTkR2cS0=
-github.com/kensantoso/ptv-gtfs-go v0.4.2/go.mod h1:+PaDvlnZJFcGSxmJUA7t9Zq48+ZVuubQIVph0cmlkqM=
+github.com/kensantoso/ptv-gtfs-go v0.5.0 h1:IfYfx8EdMMM7rSFHSUJD8mCCpwumwgBPljNPRSRAsZI=
+github.com/kensantoso/ptv-gtfs-go v0.5.0/go.mod h1:+PaDvlnZJFcGSxmJUA7t9Zq48+ZVuubQIVph0cmlkqM=
 github.com/mattn/go-isatty v0.0.20 h1:xfD0iDuEKnDkl03q4limB+vH+GxLEtL/jb4xVJSWWEY=
 github.com/mattn/go-isatty v0.0.20/go.mod h1:W+V8PltTTMOvKvAeJH7IuucS94S2C6jfK/D7dTCTo3Y=
 github.com/modelcontextprotocol/go-sdk v1.7.0 h1:yqjY2dsbKAC0LSuWZVBMrHgiG8ukXv6NRo0JiALay44=
